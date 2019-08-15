@@ -7,10 +7,12 @@
     <script src="node_modules/fhirclient/build/fhir-client.js"></script>
     <script>
       FHIR.oauth2.authorize({
-        "client_id": "growth_chart",
-        "scope":  "patient/Observation.read patient/Patient.read offline_access",
-        // "client_id": "944d96a0-4caf-4a96-813e-bc38aadb1169" // HSPC
-        // "client_id": "5570f8be-6caf-4915-ae15-69545ab38e68" // Cerner
+       "fhirServiceUrl" : "https://r3.smarthealthit.org",
+        "patientId": "smart-7777703",
+      // "patientId": "17ff80a3-dda8-4a58-a8c5-6fe94ad0d747",
+      // "fhirServiceUrl": "https://r4.smarthealthit.org",
+        "client_id": "my_web_app",
+        "scope":  " patient/Patient.read ",
       });
     </script>
   </head>
