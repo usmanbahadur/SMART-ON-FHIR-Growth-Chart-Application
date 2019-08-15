@@ -2,14 +2,17 @@
   "name": "growthchart",
   "version": "0.1.3",
   "scripts": {
-    "serve": "http-server -p 9000 -c-1",
-    "start": "npm run serve"
+  
+    "serve": "concurrently \"http-server -p 8000 -c-1.\" \"start http://127.0.0.1:8000/launch\"",
+    "start": "npm run serve",
+    "proxy": "http://127.0.0.1:8000/launch"
   },
   "dependencies": {
     "eslint": "^3.9.1",
-    "fhirclient": "^2.0.7"
+    "fhirclient": "^0.1.9",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
-    "http-server": "^0.10.0"
+    "http-server": "^0.9.0"
   }
 }
